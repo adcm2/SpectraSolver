@@ -1,0 +1,13 @@
+#ifndef SPECTRA_SOLVER_ALL_H
+#define SPECTRA_SOLVER_ALL_H
+
+// Header files
+#include "src/BlockPreconditioner.h"
+#include "src/Timer_Class.h"
+#include "src/filter_header.h"
+#include "src/freq_setup.h"
+#include "src/matrix_read.h"
+#include "src/matrix_replacement.h"
+#include "src/spectra_central.h"
+
+#endif

@@ -1,14 +1,11 @@
 cmake_minimum_required (VERSION 3.5)
 
 
+# enable_language(Fortran)
 
-
-
-enable_language(Fortran)
-
-project(Coupling)
-get_filename_component(Fortran_COMPILER_NAME ${CMAKE_Fortran_COMPILER} NAME)
-
+project(SpectraSolver)
+# get_filename_component(Fortran_COMPILER_NAME ${CMAKE_Fortran_COMPILER} NAME)
+# 
 if(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
   message(FATAL_ERROR "In-source builds not allowed. Please make a new directory (called a build directory) and run CMake from there. You may need to remove CMakeCache.txt. ")
 endif()
@@ -52,22 +49,32 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(FFTWpp)
 
-# find_package (LAPACK)
-
-# include(FetchContent)
-# FetchContent_Declare(
-#   lapack
-#   GIT_REPOSITORY https://github.com/adcm2/lapack
-#   GIT_TAG master
-# )
-# FetchContent_MakeAvailable(lapack)
-
-# blas and lapack
 find_package(OpenMP REQUIRED)
 find_package(BLAS REQUIRED)
 find_package(LAPACK REQUIRED)
+
+# find_package (LAPACK)
+# Set up the library
+add_library (SpectraSolver INTERFACE)
+target_link_libraries(SpectraSolver INTERFACE Eigen3::Eigen)
+target_link_libraries(SpectraSolver INTERFACE FFTWpp)
+target_link_libraries(SpectraSolver INTERFACE OpenMP::OpenMP_CXX)
+target_include_directories (SpectraSolver INTERFACE
+  $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+  $<INSTALL_INTERFACE:${INCLUDE_INSTALL_DIR}>
+)
+
+# optionally add in the examples and tests
+if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
+    # We're in the root, define additional targets for developers.
+    option(MY_PROJECT_BUILD_EXAMPLES   "whether or not examples should be built" ON)
+
+    if(MY_PROJECT_BUILD_EXAMPLES)
+        add_subdirectory(examples)
+    endif()
+endif()
+
+# blas and lapack
+
 # find_package(LAPACKE REQUIRED)
 # add_subdirectory(LAPACKE)
-
-
-add_subdirectory(src)

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/CMakeFiles/fftwpp-populate"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/CMakeFiles/fftwpp-populate.rule"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/CMakeFiles/fftwpp-populate-complete.rule"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/fftwpp-populate-prefix/src/fftwpp-populate-stamp/fftwpp-populate-build.rule"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/fftwpp-populate-prefix/src/fftwpp-populate-stamp/fftwpp-populate-configure.rule"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/fftwpp-populate-prefix/src/fftwpp-populate-stamp/fftwpp-populate-download.rule"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/fftwpp-populate-prefix/src/fftwpp-populate-stamp/fftwpp-populate-install.rule"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/fftwpp-populate-prefix/src/fftwpp-populate-stamp/fftwpp-populate-mkdir.rule"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/fftwpp-populate-prefix/src/fftwpp-populate-stamp/fftwpp-populate-patch.rule"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/fftwpp-populate-prefix/src/fftwpp-populate-stamp/fftwpp-populate-test.rule"
+		},
+		{
+			"file" : "/space/adcm2/SpectraSolver/build/_deps/fftwpp-subbuild/fftwpp-populate-prefix/src/fftwpp-populate-stamp/fftwpp-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"fftwpp-populate"
+		],
+		"name" : "fftwpp-populate"
+	}
+}

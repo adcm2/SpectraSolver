@@ -1,0 +1,1 @@
+/opt/gcc-13.2.0/bin/g++ CMakeFiles/test2.dir/test2.cpp.o -o ../bin/test2  /usr/lib/x86_64-linux-gnu/libfftw3.so /usr/lib/x86_64-linux-gnu/libfftw3f.so /usr/lib/x86_64-linux-gnu/libfftw3l.so /opt/gcc-13.2.0/lib64/libgomp.so /lib/x86_64-linux-gnu/libpthread.a 
