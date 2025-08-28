@@ -168,7 +168,7 @@ FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
 
 FreqFull::MATRIX
 FreqFull::Spectra_Raw_NoCoriolis(const MATRIX &a0, const MATRIX &a2,
-                                 const MATRIX &VR, const MATRIX &VS,
+                                 const MATRIX &VR, const VECTOR &VS,
                                  const double soltol) const {
     MATRIX a1(a0.rows(), a0.rows());
     a1.setZero();

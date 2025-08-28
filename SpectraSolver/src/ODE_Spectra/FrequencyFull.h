@@ -23,9 +23,9 @@ class FreqFull {
 
     // spectra
     MATRIX Spectra_Raw(const MATRIX &, const MATRIX &, const MATRIX &,
-                       const MATRIX &, const MATRIX &, const double) const;
+                       const MATRIX &, const VECTOR &, const double) const;
     MATRIX Spectra_Raw_NoCoriolis(const MATRIX &, const MATRIX &,
-                                  const MATRIX &, const MATRIX &,
+                                  const MATRIX &, const VECTOR &,
                                   const double) const;
 
     // double functions
