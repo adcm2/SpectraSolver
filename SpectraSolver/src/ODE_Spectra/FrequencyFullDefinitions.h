@@ -110,7 +110,7 @@ FreqFull::t(int idx) const {
 // only including one source at the moment
 FreqFull::MATRIX
 FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
-                      const MATRIX &VR, const MATRIX &VS,
+                      const MATRIX &VR, const VECTOR &VS,
                       const double soltol) const {
     // check sizes with assertions
     assert((a0.rows() == a0.cols()) && "a0 not square");
@@ -142,7 +142,7 @@ FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
         COMPLEX winp = m_w[idx] - myi * imep;
 
         // declare value of A
-        A = a0 + winp * a1 + winp * winp * a2;
+        A = a0 + winp * a1 - winp * winp * a2;
 
         //  rhs and guess
         VECTOR vrhs = VS / (myi * winp);
