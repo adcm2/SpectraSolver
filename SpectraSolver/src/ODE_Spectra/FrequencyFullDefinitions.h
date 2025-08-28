@@ -144,11 +144,11 @@ FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
 
         // declare value of A
         MATRIX A = a0 + winp * a1 - winp * winp * a2;
-        if (idx == m_i1) {
-            std::cout << "Frequency: " << winp
-                      << " mHz, \n Matrix block: " << A.block(0, 0, 2, 2)
-                      << std::endl;
-        }
+        // if (idx == m_i1) {
+        //     std::cout << "Frequency: " << winp
+        //               << " mHz, \n Matrix block: " << A.block(0, 0, 2, 2)
+        //               << std::endl;
+        // }
         //  rhs and guess
         VECTOR vrhs = VS / (myi * winp);
         //  x0(nm);
