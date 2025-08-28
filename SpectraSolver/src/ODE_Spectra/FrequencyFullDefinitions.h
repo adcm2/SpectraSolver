@@ -108,9 +108,9 @@ FreqFull::t(int idx) const {
 }
 
 // only including one source at the moment
-FreqFull::MATRIX
+FreqFull::VECTOR
 FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
-                      const MATRIX &VR, const VECTOR &VS,
+                      const VECTOR &VR, const VECTOR &VS,
                       const double soltol) const {
     // check sizes with assertions
     assert((a0.rows() == a0.cols()) && "a0 not square");
@@ -124,14 +124,14 @@ FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
     // indices
     auto nm = a0.rows();
     std::size_t nr = VR.cols();
-    MATRIX tmp = MATRIX::Zero(nr, m_nt / 2 + 1);
-
+    // MATRIX tmp = MATRIX::Zero(nr, m_nt / 2 + 1);
+    VECTOR tmp = VECTOR::Zero(m_nt / 2 + 1);
     //////////////////////////////////////////////////////////////////////////////////
     // some simple values
     COMPLEX myi(0.0, 1.0);
     double oneovertwopi = 1.0 / (2.0 * 3.1415926535897932);
     COMPLEX imep = static_cast<COMPLEX>(m_ep);
-    MATRIX A(nm, nm);
+    // MATRIX A(nm, nm);
 
     //////////////////////////////////////////////////////////////////////////////////
     // #pragma omp parallel private(A) shared(a0, a1, a2)
@@ -142,11 +142,11 @@ FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
         COMPLEX winp = m_w[idx] - myi * imep;
 
         // declare value of A
-        A = a0 + winp * a1 - winp * winp * a2;
+        MATRIX A = a0 + winp * a1 - winp * winp * a2;
 
         //  rhs and guess
         VECTOR vrhs = VS / (myi * winp);
-        VECTOR x0(nm);
+        //  x0(nm);
 
         // using BiCGSTAB solver from Eigen
         Eigen::BiCGSTAB<MATRIX, Eigen::DiagonalPreconditioner<COMPLEX>> solver;
@@ -154,21 +154,22 @@ FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
         // set tolerance and compute
         solver.setTolerance(soltol);
         solver.compute(A);
-        x0 = solver.preconditioner().solve(vrhs);
+        VECTOR x0 = solver.preconditioner().solve(vrhs);
 
         // solve and return
         VECTOR vlhs = solver.solveWithGuess(vrhs, x0);
 
         // find acceleration response using receiver vectors
-        tmp.block(0, idx, nr, 1) = -winp * winp * VR.transpose() * vlhs;
+        // tmp.block(0, idx, nr, 1) = -winp * winp * VR.transpose() * vlhs;
+        tmp(idx) = -winp * winp * VR.transpose() * vlhs;
         // };
     };
     return tmp;
 };
 
-FreqFull::MATRIX
+FreqFull::VECTOR
 FreqFull::Spectra_Raw_NoCoriolis(const MATRIX &a0, const MATRIX &a2,
-                                 const MATRIX &VR, const VECTOR &VS,
+                                 const VECTOR &VR, const VECTOR &VS,
                                  const double soltol) const {
     MATRIX a1(a0.rows(), a0.rows());
     a1.setZero();
