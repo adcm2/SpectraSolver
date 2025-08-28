@@ -138,16 +138,13 @@ FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
     //     {
     // #pragma omp for schedule(dynamic, 10)
     for (int idx = m_i1; idx < m_i2; ++idx) {
+        // HACKY: just to see values
         // complex frequency
-        COMPLEX winp = m_w[idx] - myi * imep;
+        COMPLEX winp = m_w[idx] * 3600.0 - myi * imep;
 
         // declare value of A
         MATRIX A = a0 + winp * a1 - winp * winp * a2;
-        if (idx == m_i1) {
-            std::cout << "Frequency function: " << winp
-                      << " mHz, Matrix block: " << A.block(0, 0, 2, 2)
-                      << std::endl;
-        }
+
         //  rhs and guess
         VECTOR vrhs = VS / (myi * winp);
         //  x0(nm);
