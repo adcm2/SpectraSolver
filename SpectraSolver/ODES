@@ -1,0 +1,9 @@
+#ifndef SPECTRA_SOLVER_ODE_H
+#define SPECTRA_SOLVER_ODE_H
+
+// Header files
+#include "src/ODE_Spectra/FrequencySetup.h"
+#include "src/ODE_Spectra/ODE_Coupled_Spectra_Draft.h"
+#include "src/OLD_CODE/Timer_Class.h"
+
+#endif

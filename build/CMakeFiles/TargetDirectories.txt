@@ -43,6 +43,7 @@
 /home/adcm2/space/SpectraSolver/build/_deps/numericconcepts-build/CMakeFiles/install/strip.dir
 /home/adcm2/space/SpectraSolver/build/examples/CMakeFiles/test.dir
 /home/adcm2/space/SpectraSolver/build/examples/CMakeFiles/test2.dir
+/home/adcm2/space/SpectraSolver/build/examples/CMakeFiles/test3.dir
 /home/adcm2/space/SpectraSolver/build/examples/CMakeFiles/edit_cache.dir
 /home/adcm2/space/SpectraSolver/build/examples/CMakeFiles/rebuild_cache.dir
 /home/adcm2/space/SpectraSolver/build/examples/CMakeFiles/list_install_components.dir

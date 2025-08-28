@@ -189,6 +189,20 @@ test2/fast:
 	cd /home/adcm2/space/SpectraSolver/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/test2.dir/build.make examples/CMakeFiles/test2.dir/build
 .PHONY : test2/fast
 
+# Convenience name for target.
+examples/CMakeFiles/test3.dir/rule:
+	cd /home/adcm2/space/SpectraSolver/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/CMakeFiles/test3.dir/rule
+.PHONY : examples/CMakeFiles/test3.dir/rule
+
+# Convenience name for target.
+test3: examples/CMakeFiles/test3.dir/rule
+.PHONY : test3
+
+# fast build rule for target.
+test3/fast:
+	cd /home/adcm2/space/SpectraSolver/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/test3.dir/build.make examples/CMakeFiles/test3.dir/build
+.PHONY : test3/fast
+
 test.o: test.cpp.o
 .PHONY : test.o
 
@@ -237,6 +251,30 @@ test2.cpp.s:
 	cd /home/adcm2/space/SpectraSolver/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/test2.dir/build.make examples/CMakeFiles/test2.dir/test2.cpp.s
 .PHONY : test2.cpp.s
 
+test3.o: test3.cpp.o
+.PHONY : test3.o
+
+# target to build an object file
+test3.cpp.o:
+	cd /home/adcm2/space/SpectraSolver/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/test3.dir/build.make examples/CMakeFiles/test3.dir/test3.cpp.o
+.PHONY : test3.cpp.o
+
+test3.i: test3.cpp.i
+.PHONY : test3.i
+
+# target to preprocess a source file
+test3.cpp.i:
+	cd /home/adcm2/space/SpectraSolver/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/test3.dir/build.make examples/CMakeFiles/test3.dir/test3.cpp.i
+.PHONY : test3.cpp.i
+
+test3.s: test3.cpp.s
+.PHONY : test3.s
+
+# target to generate assembly for a file
+test3.cpp.s:
+	cd /home/adcm2/space/SpectraSolver/build && $(MAKE) $(MAKESILENT) -f examples/CMakeFiles/test3.dir/build.make examples/CMakeFiles/test3.dir/test3.cpp.s
+.PHONY : test3.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -251,12 +289,16 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... test2"
+	@echo "... test3"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
 	@echo "... test2.o"
 	@echo "... test2.i"
 	@echo "... test2.s"
+	@echo "... test3.o"
+	@echo "... test3.i"
+	@echo "... test3.s"
 .PHONY : help
 
 

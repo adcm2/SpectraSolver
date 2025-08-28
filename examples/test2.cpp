@@ -2,7 +2,7 @@
 #define EIGEN_DONT_PARALLELIZE
 #endif
 
-#include <SpectraSolver/All>
+#include <SpectraSolver/ODES>
 #include <iostream>
 
 int
@@ -24,8 +24,8 @@ main() {
     qex = 4;
 
     // getting setup of frequencies etc used in idsm
-    freq_setup myfreq(f1, f2, dt, tout, df0, wtb, t1, t2, qex);
+    SpectraSolver::freq_setup myfreq(f1, f2, dt, tout, df0, wtb, t1, t2, qex);
     std::cout << "f1: " << myfreq.f1() << ", f2: " << myfreq.f2()
-              << ", df: " << myfreq.df() << ", nt: " << myfreq.nt() << "\n";            
+              << ", df: " << myfreq.df() << ", nt: " << myfreq.nt() << "\n";
     return 0;
 }

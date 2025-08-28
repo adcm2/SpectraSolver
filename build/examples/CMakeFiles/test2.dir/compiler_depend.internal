@@ -4,8 +4,8 @@
 examples/CMakeFiles/test2.dir/test2.cpp.o
  /home/adcm2/space/SpectraSolver/examples/test2.cpp
  /usr/include/stdc-predef.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/All
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/BlockPreconditioner.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/ODES
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/ODE_Spectra/FrequencySetup.h
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/IterativeLinearSolvers
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseCore
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Core
@@ -475,7 +475,8 @@ examples/CMakeFiles/test2.dir/test2.cpp.o
  /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_list.h
  /opt/gcc-13.2.0/include/c++/13.2.0/bits/allocated_ptr.h
  /opt/gcc-13.2.0/include/c++/13.2.0/bits/list.tcc
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_replacement.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/iostream
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/ODE_Spectra/ODE_Coupled_Spectra_Draft.h
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Core
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Dense
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/LU
@@ -550,50 +551,8 @@ examples/CMakeFiles/test2.dir/test2.cpp.o
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/RealQZ.h
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
- /opt/gcc-13.2.0/include/c++/13.2.0/iostream
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/IterativeSolvers
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Sparse
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseCholesky
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCholesky/SimplicialCholesky.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCholesky/InternalHeaderCheck.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseLU
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_Structs.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/InternalHeaderCheck.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLUImpl.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseColEtree.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_Memory.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_relax_snode.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_pivotL.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_panel_dfs.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_kernel_bmod.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_panel_bmod.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_column_dfs.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_column_bmod.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_pruneL.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_Utils.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseQR
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseQR/SparseQR.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseQR/InternalHeaderCheck.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/IterativeLinearSolvers
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Jacobi
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Householder
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/util/DisableStupidWarnings.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/IncompleteLU.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/InternalHeaderCheck.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/GMRES.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/DGMRES.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Eigenvalues
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/MINRES.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/IDRS.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/BiCGSTABL.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/IDRSTABL.h
- /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/util/ReenableStupidWarnings.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/Timer_Class.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/ODE_Spectra/FrequencySetup.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/Timer_Class.h
  /opt/gcc-13.2.0/include/c++/13.2.0/chrono
  /opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono.h
  /opt/gcc-13.2.0/include/c++/13.2.0/ratio
@@ -619,63 +578,4 @@ examples/CMakeFiles/test2.dir/test2.cpp.o
  /opt/gcc-13.2.0/include/c++/13.2.0/charconv
  /opt/gcc-13.2.0/include/c++/13.2.0/span
  /opt/gcc-13.2.0/include/c++/13.2.0/variant
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/filter_header.h
- /opt/gcc-13.2.0/include/c++/13.2.0/math.h
- /opt/gcc-13.2.0/include/c++/13.2.0/fstream
- /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/basic_file.h
- /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/c++io.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/fstream.tcc
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/freq_setup.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_read.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_replacement.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/spectra_central.h
- /opt/gcc-13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include/omp.h
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/Ranges
- /usr/include/fftw3.h
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Core.h
- /opt/gcc-13.2.0/include/c++/13.2.0/memory
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_raw_storage_iter.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr_atomic.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/atomic_base.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/atomic_lockfree_defines.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/atomic_wait.h
- /usr/include/unistd.h
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h
- /usr/include/x86_64-linux-gnu/bits/environments.h
- /usr/include/x86_64-linux-gnu/bits/confname.h
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
- /usr/include/linux/close_range.h
- /usr/include/syscall.h
- /usr/include/x86_64-linux-gnu/sys/syscall.h
- /usr/include/x86_64-linux-gnu/asm/unistd.h
- /usr/include/x86_64-linux-gnu/asm/unistd_64.h
- /usr/include/x86_64-linux-gnu/bits/syscall.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/std_mutex.h
- /opt/gcc-13.2.0/include/c++/13.2.0/backward/auto_ptr.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/ranges_uninitialized.h
- /opt/gcc-13.2.0/include/c++/13.2.0/pstl/glue_memory_defs.h
- /home/adcm2/space/SpectraSolver/build/_deps/numericconcepts-src/include/NumericConcepts/Numeric.hpp
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Options.h
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Plan.h
- /opt/gcc-13.2.0/include/c++/13.2.0/ranges
- /opt/gcc-13.2.0/include/c++/13.2.0/iterator
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/stream_iterator.h
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Core.h
- /home/adcm2/space/SpectraSolver/build/_deps/numericconcepts-src/include/NumericConcepts/Ranges.hpp
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Options.h
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Views.h
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Utility.h
- /opt/gcc-13.2.0/include/c++/13.2.0/random
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/random.h
- /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/opt_random.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/random.tcc
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Views.h
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Wisdom.h
- /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Plan.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/BlockPreconditioner.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/blockindex.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/postprocessfunctions.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/filter_base.h
 

@@ -486,41 +486,8 @@ examples/CMakeFiles/test.dir/test.cpp.o
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/RealQZ.h
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h
- /opt/gcc-13.2.0/include/c++/13.2.0/chrono
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono.h
- /opt/gcc-13.2.0/include/c++/13.2.0/ratio
- /opt/gcc-13.2.0/include/c++/13.2.0/ctime
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/parse_numbers.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr_base.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/allocated_ptr.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/unique_ptr.h
- /opt/gcc-13.2.0/include/c++/13.2.0/ext/concurrence.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/align.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono_io.h
- /opt/gcc-13.2.0/include/c++/13.2.0/iomanip
- /opt/gcc-13.2.0/include/c++/13.2.0/locale
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.h
- /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/time_members.h
- /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/messages_members.h
- /usr/include/libintl.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/codecvt.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.tcc
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_conv.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/quoted_string.h
- /opt/gcc-13.2.0/include/c++/13.2.0/format
- /opt/gcc-13.2.0/include/c++/13.2.0/charconv
- /opt/gcc-13.2.0/include/c++/13.2.0/span
- /opt/gcc-13.2.0/include/c++/13.2.0/variant
- /opt/gcc-13.2.0/include/c++/13.2.0/filesystem
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_fwd.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_path.h
- /opt/gcc-13.2.0/include/c++/13.2.0/codecvt
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_dir.h
- /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_ops.h
- /opt/gcc-13.2.0/include/c++/13.2.0/iostream
- /home/adcm2/space/SpectraSolver/SpectraSolver/All
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/BlockPreconditioner.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/OLD
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/BlockPreconditioner.h
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/IterativeLinearSolvers
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseCore
  /opt/gcc-13.2.0/include/c++/13.2.0/map
@@ -580,8 +547,10 @@ examples/CMakeFiles/test.dir/test.cpp.o
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h
  /opt/gcc-13.2.0/include/c++/13.2.0/list
  /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_list.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/allocated_ptr.h
  /opt/gcc-13.2.0/include/c++/13.2.0/bits/list.tcc
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_replacement.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/matrix_replacement.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/iostream
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/IterativeSolvers
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Sparse
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseCholesky
@@ -624,17 +593,42 @@ examples/CMakeFiles/test.dir/test.cpp.o
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/BiCGSTABL.h
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/IDRSTABL.h
  /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/util/ReenableStupidWarnings.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/Timer_Class.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/filter_header.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/Timer_Class.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/chrono
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/ratio
+ /opt/gcc-13.2.0/include/c++/13.2.0/ctime
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/parse_numbers.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr_base.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/unique_ptr.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/ext/concurrence.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/align.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono_io.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/iomanip
+ /opt/gcc-13.2.0/include/c++/13.2.0/locale
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/time_members.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/messages_members.h
+ /usr/include/libintl.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/codecvt.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.tcc
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_conv.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/quoted_string.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/format
+ /opt/gcc-13.2.0/include/c++/13.2.0/charconv
+ /opt/gcc-13.2.0/include/c++/13.2.0/span
+ /opt/gcc-13.2.0/include/c++/13.2.0/variant
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/filter_header.h
  /opt/gcc-13.2.0/include/c++/13.2.0/math.h
  /opt/gcc-13.2.0/include/c++/13.2.0/fstream
  /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/basic_file.h
  /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/c++io.h
  /opt/gcc-13.2.0/include/c++/13.2.0/bits/fstream.tcc
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/freq_setup.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_read.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_replacement.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/spectra_central.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/freq_setup.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/matrix_read.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/matrix_replacement.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/spectra_central.h
  /opt/gcc-13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include/omp.h
  /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/Ranges
  /usr/include/fftw3.h
@@ -680,8 +674,14 @@ examples/CMakeFiles/test.dir/test.cpp.o
  /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Views.h
  /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Wisdom.h
  /home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src/FFTWpp/src/Plan.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/BlockPreconditioner.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/blockindex.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/postprocessfunctions.h
- /home/adcm2/space/SpectraSolver/SpectraSolver/src/filter_base.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/BlockPreconditioner.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/blockindex.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/postprocessfunctions.h
+ /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/filter_base.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/filesystem
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_fwd.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_path.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/codecvt
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_dir.h
+ /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_ops.h
 

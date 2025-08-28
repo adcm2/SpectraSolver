@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/adcm2/space/SpectraSolver -I/home/adcm2/space/SpectraSolver/build/_deps/fftwpp-src -I/home/adcm2/space/SpectraSolver/build/_deps/numericconcepts-src/include -isystem /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src
 
-CXX_FLAGS = -fopenmp -std=gnu++23
+CXX_FLAGS = -g -fopenmp -std=gnu++23
 

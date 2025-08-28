@@ -485,41 +485,8 @@ examples/CMakeFiles/test.dir/test.cpp.o: /home/adcm2/space/SpectraSolver/example
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/GeneralizedEigenSolver.h \
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/RealQZ.h \
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/chrono \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/ratio \
-  /opt/gcc-13.2.0/include/c++/13.2.0/ctime \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/parse_numbers.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr_base.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/allocated_ptr.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/unique_ptr.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/ext/concurrence.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/align.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono_io.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/iomanip \
-  /opt/gcc-13.2.0/include/c++/13.2.0/locale \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
-  /usr/include/libintl.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/codecvt.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.tcc \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_conv.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/quoted_string.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/format \
-  /opt/gcc-13.2.0/include/c++/13.2.0/charconv \
-  /opt/gcc-13.2.0/include/c++/13.2.0/span \
-  /opt/gcc-13.2.0/include/c++/13.2.0/variant \
-  /opt/gcc-13.2.0/include/c++/13.2.0/filesystem \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_fwd.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_path.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/codecvt \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_dir.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_ops.h \
-  /opt/gcc-13.2.0/include/c++/13.2.0/iostream \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/All \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/BlockPreconditioner.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/OLD \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/BlockPreconditioner.h \
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/IterativeLinearSolvers \
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseCore \
   /opt/gcc-13.2.0/include/c++/13.2.0/map \
@@ -579,8 +546,10 @@ examples/CMakeFiles/test.dir/test.cpp.o: /home/adcm2/space/SpectraSolver/example
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
   /opt/gcc-13.2.0/include/c++/13.2.0/list \
   /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_list.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/allocated_ptr.h \
   /opt/gcc-13.2.0/include/c++/13.2.0/bits/list.tcc \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_replacement.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/matrix_replacement.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/iostream \
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/IterativeSolvers \
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Sparse \
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseCholesky \
@@ -623,17 +592,42 @@ examples/CMakeFiles/test.dir/test.cpp.o: /home/adcm2/space/SpectraSolver/example
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/BiCGSTABL.h \
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/IDRSTABL.h \
   /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/util/ReenableStupidWarnings.h \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/Timer_Class.h \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/filter_header.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/Timer_Class.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/chrono \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/ratio \
+  /opt/gcc-13.2.0/include/c++/13.2.0/ctime \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/parse_numbers.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr_base.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/unique_ptr.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/ext/concurrence.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/align.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono_io.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/iomanip \
+  /opt/gcc-13.2.0/include/c++/13.2.0/locale \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/time_members.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/messages_members.h \
+  /usr/include/libintl.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/codecvt.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.tcc \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_conv.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/quoted_string.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/format \
+  /opt/gcc-13.2.0/include/c++/13.2.0/charconv \
+  /opt/gcc-13.2.0/include/c++/13.2.0/span \
+  /opt/gcc-13.2.0/include/c++/13.2.0/variant \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/filter_header.h \
   /opt/gcc-13.2.0/include/c++/13.2.0/math.h \
   /opt/gcc-13.2.0/include/c++/13.2.0/fstream \
   /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/basic_file.h \
   /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/c++io.h \
   /opt/gcc-13.2.0/include/c++/13.2.0/bits/fstream.tcc \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/freq_setup.h \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_read.h \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_replacement.h \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/spectra_central.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/freq_setup.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/matrix_read.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/matrix_replacement.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/spectra_central.h \
   /opt/gcc-13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include/omp.h \
   _deps/fftwpp-src/FFTWpp/Ranges \
   /usr/include/fftw3.h \
@@ -679,15 +673,29 @@ examples/CMakeFiles/test.dir/test.cpp.o: /home/adcm2/space/SpectraSolver/example
   _deps/fftwpp-src/FFTWpp/src/Views.h \
   _deps/fftwpp-src/FFTWpp/src/Wisdom.h \
   _deps/fftwpp-src/FFTWpp/src/Plan.h \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/BlockPreconditioner.h \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/blockindex.h \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/postprocessfunctions.h \
-  /home/adcm2/space/SpectraSolver/SpectraSolver/src/filter_base.h
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/BlockPreconditioner.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/blockindex.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/postprocessfunctions.h \
+  /home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/filter_base.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/filesystem \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_fwd.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_path.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/codecvt \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_dir.h \
+  /opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_ops.h
 
 
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/filter_base.h:
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_path.h:
 
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/postprocessfunctions.h:
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_fwd.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/filesystem:
+
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/filter_base.h:
+
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/postprocessfunctions.h:
+
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/blockindex.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/opt_random.h:
 
@@ -749,11 +757,55 @@ _deps/numericconcepts-src/include/NumericConcepts/Numeric.hpp:
 
 _deps/fftwpp-src/FFTWpp/Ranges:
 
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/spectra_central.h:
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/spectra_central.h:
+
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/matrix_read.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/basic_file.h:
 
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/filter_header.h:
+/opt/gcc-13.2.0/include/c++/13.2.0/variant:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/span:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/format:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/quoted_string.h:
+
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/freq_setup.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_conv.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/codecvt.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/time_members.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/iomanip:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono_io.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/ext/concurrence.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/atomic_wait.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/unique_ptr.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/messages_members.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/parse_numbers.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/ctime:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/ratio:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/chrono:
+
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/Timer_Class.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/src/IterativeSolvers/IDRSTABL.h:
 
@@ -799,50 +851,6 @@ _deps/fftwpp-src/FFTWpp/Ranges:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseColEtree.h:
 
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCholesky/SimplicialCholesky.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Sparse:
-
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_replacement.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/list.tcc:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_list.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/list:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/OrderingMethods/Eigen_Colamd.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/OrderingMethods/Ordering.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/OrderingMethods/InternalHeaderCheck.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/OrderingMethods/Amd.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/OrderingMethods:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseSolverBase.h:
-
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/mofunc_impl.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/algorithmfwd.h:
@@ -864,10 +872,6 @@ _deps/fftwpp-src/FFTWpp/src/Wisdom.h:
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/enable_special_members.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/unordered_map.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLUImpl.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/unordered_map:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/sstream.tcc:
 
@@ -935,17 +939,9 @@ _deps/fftwpp-src/FFTWpp/src/Wisdom.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Geometry/Quaternion.h:
 
-_deps/fftwpp-src/FFTWpp/src/Options.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseFuzzy.h:
-
-/usr/include/errno.h:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
@@ -958,8 +954,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/ranges_base.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/string_view:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_path.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_raw_storage_iter.h:
 
@@ -997,8 +991,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/arch/SSE/MathFunctions.h:
 
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/Timer_Class.h:
-
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/QR/ColPivHouseholderQR.h:
@@ -1006,6 +998,8 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/AmbiVector.h:
+
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/BlockPreconditioner.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/gthr.h:
 
@@ -1079,10 +1073,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/tr1/gamma.tcc:
 
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/InternalHeaderCheck.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/charconv:
-
 /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/gthr-default.h:
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h:
@@ -1099,6 +1089,8 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/tr1/bessel_function.tcc:
 
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/OrderingMethods:
+
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/charconv.h:
 
 /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h:
@@ -1107,6 +1099,10 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/localefwd.h:
 
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_ops.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/nested_exception.h:
+
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/stringfwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/iscanonical.h:
@@ -1114,14 +1110,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/clocale:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/IterativeSolvers:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/QR/InternalHeaderCheck.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/codecvt:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/numbers:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
@@ -1181,8 +1169,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_algobase.h:
 
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/matrix_read.h:
-
 /opt/gcc-13.2.0/include/c++/13.2.0/ext/type_traits.h:
 
 /usr/include/asm-generic/errno-base.h:
@@ -1190,8 +1176,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/util/MoreMeta.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/istream.tcc:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/quoted_string.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_iterator.h:
 
@@ -1209,10 +1193,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_construct.h:
 
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/nested_exception.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_ops.h:
-
 /opt/gcc-13.2.0/include/c++/13.2.0/typeinfo:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/util/DisableStupidWarnings.h:
@@ -1221,7 +1201,11 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseRedux.h:
 
-/opt/gcc-13.2.0/include/c++/13.2.0/ratio:
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_dir.h:
+
+/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/x86_64-linux-gnu/gnu/stubs.h:
 
@@ -1275,8 +1259,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_algo.h:
 
-/opt/gcc-13.2.0/include/c++/13.2.0/format:
-
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/hashtable.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/char_traits.h:
@@ -1285,13 +1267,17 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseLU:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/SolveTriangular.h:
-
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/tr1/exp_integral.tcc:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr_base.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
+
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /home/adcm2/space/SpectraSolver/examples/test.cpp:
 
@@ -1300,10 +1286,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 /opt/gcc-13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include-fixed/pthread.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/util/StaticAssert.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/InternalHeaderCheck.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/products/TriangularMatrixMatrix.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Geometry/Homogeneous.h:
 
@@ -1317,6 +1299,8 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
 
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/filter_header.h:
+
 /usr/include/x86_64-linux-gnu/bits/timex.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/exception_defines.h:
@@ -1328,6 +1312,12 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/util/ConfigureVectorization.h:
+
+/usr/include/libintl.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/pstl/pstl_config.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/ext/atomicity.h:
 
@@ -1345,11 +1335,17 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/AssignEvaluator.h:
 
+/opt/gcc-13.2.0/include/c++/13.2.0/codecvt:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/QR/InternalHeaderCheck.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/numbers:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/unsupported/Eigen/IterativeSolvers:
+
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/functexcept.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/span:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/ext/numeric_traits.h:
 
@@ -1391,7 +1387,7 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/ranges_cmp.h:
 
-/opt/gcc-13.2.0/include/c++/13.2.0/chrono:
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_iterator_base_funcs.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/stdlib.h:
 
@@ -1417,7 +1413,7 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/tr1/beta_function.tcc:
 
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/blockindex.h:
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/tr1/ell_integral.tcc:
 
@@ -1467,6 +1463,8 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Sparse:
+
 /opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/c++io.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -1506,8 +1504,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/plugins/MatrixCwiseUnaryOps.inc:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/algorithm:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/iomanip:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseDot.h:
 
@@ -1573,10 +1569,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/GenericPacketMath.h:
 
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCholesky/InternalHeaderCheck.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Jacobi:
-
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/products/TriangularMatrixVector.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/MathFunctionsImpl.h:
@@ -1617,15 +1609,11 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/CoreIterators.h:
 
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/plugins/CommonCwiseBinaryOps.inc:
-
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/DenseStorage.h:
 
 /usr/include/asm-generic/errno.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/EigenBase.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/time_members.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/Product.h:
 
@@ -1665,6 +1653,10 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/Swap.h:
 
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/SolveTriangular.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseLU:
+
 /opt/gcc-13.2.0/lib/gcc/x86_64-pc-linux-gnu/13.2.0/include/stddef.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/Stride.h:
@@ -1701,13 +1693,15 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/RealQZ.h:
 
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr.h:
-
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/Visitor.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/Redux.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/CommaInitializer.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/locale:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/PermutationMatrix.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/Transpositions.h:
 
@@ -1725,6 +1719,10 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/GlobalFunctions.h:
 
+/opt/gcc-13.2.0/include/c++/13.2.0/unordered_map:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLUImpl.h:
+
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/products/SelfadjointProduct.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/BandMatrix.h:
@@ -1735,15 +1733,7 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/Select.h:
 
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseCholesky:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Core:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/ArrayWrapper.h:
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCholesky/SimplicialCholesky.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/StlIterators.h:
 
@@ -1779,8 +1769,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Geometry/Umeyama.h:
 
-/opt/gcc-13.2.0/include/c++/13.2.0/variant:
-
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Jacobi/InternalHeaderCheck.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SVD/SVDBase.h:
@@ -1790,8 +1778,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Cholesky/InternalHeaderCheck.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_facets_nonio.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Cholesky/LDLT.h:
 
@@ -1817,6 +1803,8 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Geometry/Hyperplane.h:
 
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseSolverBase.h:
+
 /opt/gcc-13.2.0/include/c++/13.2.0/math.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Householder/BlockHouseholder.h:
@@ -1830,6 +1818,8 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SVD:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/misc/RealSvd2x2.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/CwiseBinaryOp.h:
 
@@ -1865,8 +1855,6 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/EigenSolver.h:
 
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/freq_setup.h:
-
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/ComplexSchur.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/ComplexEigenSolver.h:
@@ -1881,63 +1869,21 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/MatrixBaseEigenvalues.h:
 
-/opt/gcc-13.2.0/include/c++/13.2.0/ctime:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/chrono_io.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
-
-/usr/include/x86_64-linux-gnu/sys/cdefs.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/shared_ptr_base.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/atomic_wait.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/unique_ptr.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/locale_conv.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/ext/concurrence.h:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/PermutationMatrix.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/locale:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/parse_numbers.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/x86_64-pc-linux-gnu/bits/messages_members.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/pstl/pstl_config.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
-
-/usr/include/libintl.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/codecvt.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/filesystem:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_fwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/mathcalls.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/fs_dir.h:
-
-/home/adcm2/space/SpectraSolver/SpectraSolver/All:
-
-/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/TriangularSolver.h:
-
-/opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_iterator_base_funcs.h:
-
-/home/adcm2/space/SpectraSolver/SpectraSolver/src/BlockPreconditioner.h:
+/home/adcm2/space/SpectraSolver/SpectraSolver/OLD:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_tree.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_map.h:
 
+_deps/fftwpp-src/FFTWpp/src/Options.h:
+
+/usr/include/errno.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseFuzzy.h:
+
 /opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_multimap.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h:
 
 /opt/gcc-13.2.0/include/c++/13.2.0/numeric:
 
@@ -1985,4 +1931,58 @@ _deps/fftwpp-src/FFTWpp/src/Options.h:
 
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseSelfAdjointView.h:
 
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
+
 /home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/SparseTriangularView.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCore/TriangularSolver.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/OrderingMethods/Amd.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/OrderingMethods/InternalHeaderCheck.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/OrderingMethods/Ordering.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/OrderingMethods/Eigen_Colamd.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/charconv:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/InternalHeaderCheck.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/list:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/stl_list.h:
+
+/opt/gcc-13.2.0/include/c++/13.2.0/bits/list.tcc:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/plugins/CommonCwiseBinaryOps.inc:
+
+/home/adcm2/space/SpectraSolver/SpectraSolver/src/OLD_CODE/matrix_replacement.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Core:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Eigenvalues/GeneralizedSelfAdjointEigenSolver.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/ArrayWrapper.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/SparseCholesky:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/Jacobi:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseCholesky/InternalHeaderCheck.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/Core/products/TriangularMatrixMatrix.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/InternalHeaderCheck.h:
+
+/home/adcm2/Documents/c++/Gravitational_Field/build/_deps/eigen3-src/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:

@@ -1,0 +1,10 @@
+#ifndef SPECTRA_SOLVER_FF_H
+#define SPECTRA_SOLVER_FF_H
+
+// Header files
+#include "src/ODE_Spectra/FrequencyFull.h"
+#include "src/ODE_Spectra/FrequencyFullConstructor.h"
+#include "src/ODE_Spectra/FrequencyFullDefinitions.h"
+#include "src/OLD_CODE/Timer_Class.h"
+
+#endif

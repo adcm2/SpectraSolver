@@ -2,12 +2,14 @@
 #define SPECTRA_SOLVER_ALL_H
 
 // Header files
-#include "src/BlockPreconditioner.h"
-#include "src/Timer_Class.h"
-#include "src/filter_header.h"
-#include "src/freq_setup.h"
-#include "src/matrix_read.h"
-#include "src/matrix_replacement.h"
-#include "src/spectra_central.h"
+#include "src/ODE_Spectra/FrequencySetup.h"
+#include "src/ODE_Spectra/ODE_Coupled_Spectra_Draft.h"
+#include "src/OLD_CODE/BlockPreconditioner.h"
+#include "src/OLD_CODE/Timer_Class.h"
+#include "src/OLD_CODE/filter_header.h"
+#include "src/OLD_CODE/freq_setup.h"
+#include "src/OLD_CODE/matrix_read.h"
+#include "src/OLD_CODE/matrix_replacement.h"
+#include "src/OLD_CODE/spectra_central.h"
 
 #endif

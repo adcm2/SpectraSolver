@@ -200,6 +200,19 @@ test2/fast:
 	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/test2.dir/build.make examples/CMakeFiles/test2.dir/build
 .PHONY : test2/fast
 
+#=============================================================================
+# Target rules for targets named test3
+
+# Build rule for target.
+test3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test3
+.PHONY : test3
+
+# fast build rule for target.
+test3/fast:
+	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/test3.dir/build.make examples/CMakeFiles/test3.dir/build
+.PHONY : test3/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -215,6 +228,7 @@ help:
 	@echo "... FFTWpp"
 	@echo "... test"
 	@echo "... test2"
+	@echo "... test3"
 .PHONY : help
 
 
