@@ -19,14 +19,21 @@ class FreqFull {
     FreqFull() {};
     ~FreqFull() {};
     FreqFull(double, double, double, double, double, double, double, double,
-             int);
+             int, double = 1.0);
 
     // spectra
-    VECTOR Spectra_Raw(const MATRIX &, const MATRIX &, const MATRIX &,
-                       const VECTOR &, const VECTOR &, const double) const;
-    VECTOR Spectra_Raw_NoCoriolis(const MATRIX &, const MATRIX &,
-                                  const VECTOR &, const VECTOR &,
+    MATRIX Spectra_Raw(const MATRIX &, const MATRIX &, const MATRIX &,
+                       const MATRIX &, const VECTOR &, const double) const;
+    // template <typename MatrixType>
+    MATRIX Spectra_Raw_Low_Memory(const MATRIX &, const MATRIX &,
+                                  const MATRIX &, const MATRIX &,
+                                  const VECTOR &, const double) const;
+    MATRIX Spectra_Raw_NoCoriolis(const MATRIX &, const MATRIX &,
+                                  const MATRIX &, const VECTOR &,
                                   const double) const;
+    MATRIX Spectra_Raw_No_Coriolis_Low_Memory(const MATRIX &, const MATRIX &,
+                                              const MATRIX &, const VECTOR &,
+                                              const double) const;
 
     // double functions
     double f(int) const;
@@ -60,7 +67,7 @@ class FreqFull {
 
    private:
     double m_f1, m_f2, m_tout, m_df0, m_wtb, m_t1, m_t2, m_df, m_ep, m_df2,
-        m_dt;
+        m_dt, m_timenorm, m_frequencynorm;
     int m_nt, m_nt0, m_i1, m_i2, m_i12, m_i22;
 
     std::vector<double> m_w;

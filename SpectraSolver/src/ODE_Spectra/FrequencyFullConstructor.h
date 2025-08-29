@@ -3,19 +3,29 @@
 
 namespace SpectraSolver {
 // constructor
+// f1, f2 in mHz, dt in s, tout in hours, df0 in mHz, wtb in mHz, t1 and t2 in
+// hours qex is an integer to increase frequency resolution
 FreqFull::FreqFull(double f1, double f2, double dt, double tout, double df0,
-                   double wtb, double t1, double t2, int qex)
-    : m_f1{f1 / 1000.0},
-      m_f2{f2 / 1000.0},
-      m_dt{dt},
-      m_df0{df0 / 1000.0},
-      m_tout{tout * 3600.0},
-      m_t1{t1 * 3600.0},
-      m_t2{std::min(t2, tout) * 3600.0},
-      m_wtb{wtb * 3.1415926535 / 500.0} {
-    // Nyquist frequency
-    double fn = 0.5 / dt;
-
+                   double wtb, double t1, double t2, int qex, double TimeNorm)
+    : m_f1{f1 / 1000.0 * TimeNorm},
+      m_f2{f2 / 1000.0 * TimeNorm},
+      m_dt{dt / TimeNorm},
+      m_df0{df0 / 1000.0 * TimeNorm},
+      m_tout{tout * 3600.0 / TimeNorm},
+      m_t1{t1 * 3600.0 / TimeNorm},
+      m_t2{std::min(t2, tout) * 3600.0 / TimeNorm},
+      m_wtb{wtb * 3.1415926535 / 500.0 * TimeNorm},
+      m_timenorm{TimeNorm},
+      m_frequencynorm{1.0 / TimeNorm} {
+    ////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////
+    // calculating and storing in s and Hz
+    //  Nyquist frequency
+    double fn = 0.5 / m_dt;
+    // std::cout << "df: " << m_df << std::endl;
+    // std::cout << "f1: " << m_f1 << ", f2: " << m_f2 << ", fn: " << fn
+    //           << ", dt: " << m_dt << ", tout: " << m_tout << std::endl;
     // check for f2
     if (fn < m_f2) {
         std::cout << "f2 is greater than the Nyquist frequency for the time "
@@ -41,6 +51,7 @@ FreqFull::FreqFull(double f1, double f2, double dt, double tout, double df0,
     m_df = 1.0 / (m_nt * m_dt);   // new df
 
     // finding new values of f1 and f2 and corresponding integer numbers
+
     m_i1 = std::max(static_cast<int>(std::floor(m_f1 / m_df)), 0);
     m_i2 = std::min(static_cast<int>(std::floor(m_f2 / m_df)) + 2, m_nt);
     m_f1 = (m_i1 - 1) * m_df;
@@ -67,6 +78,10 @@ FreqFull::FreqFull(double f1, double f2, double dt, double tout, double df0,
     m_df2 = 1.0 / (m_nt0 * m_dt);
     m_i12 = std::max(static_cast<int>(floor(m_f1 / m_df2)) - 1, 0);
     m_i22 = static_cast<int>(floor(m_f2 / m_df2)) + 1;
+
+    ////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////
 };
 }   // namespace SpectraSolver
 #endif
