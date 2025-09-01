@@ -81,7 +81,7 @@ class MatrixReplaceFT : public Eigen::EigenBase<MatrixReplaceFT<MRScalar>> {
 
     // return value of matrix at particular index
     const MRScalar coeff(int idxi, int idxj) const {
-        assert((idxi < _mat_a0->rows() && idxj < _mat_a0->cols()) &&
+        assert((idxi < _mat_a0.rows() && idxj < _mat_a0.cols()) &&
                "Incorrect index");
         MRScalar tmp;
 
