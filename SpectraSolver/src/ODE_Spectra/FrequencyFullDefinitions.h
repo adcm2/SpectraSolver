@@ -206,7 +206,10 @@ FreqFull::Spectra_Raw_Low_Memory(const MATRIX &a0, const MATRIX &a1,
     // set tolerance and compute
     solver.setTolerance(soltol);
     for (int idx = m_i1; idx < m_i2; ++idx) {
-        COMPLEX winp = m_w[idx] - myi * imep;
+        COMPLEX myvali = COMPLEX(0.0, -0.2);
+        // COMPLEX winp = m_w[idx] - myi * imep;
+        COMPLEX winp = m_w[idx] + myvali;
+
         // if (idx == m_i1) {
         //     std::cout << std::setprecision(15) << idx << " " << winp << "\n";
         // }
@@ -218,7 +221,8 @@ FreqFull::Spectra_Raw_Low_Memory(const MATRIX &a0, const MATRIX &a1,
         // MATRIX A = a0 + winp * a1 - winp * winp * a2;
 
         //  rhs and guess
-        VECTOR vrhs = VS / (myi * winp);
+        // VECTOR vrhs = VS / (myi * winp);
+        VECTOR vrhs = VS;
 
         // using BiCGSTAB solver from Eigen
         solver.compute(A);
@@ -226,10 +230,12 @@ FreqFull::Spectra_Raw_Low_Memory(const MATRIX &a0, const MATRIX &a1,
 
         // solve and return
         // VECTOR vlhs = solver.solve(vrhs);
-        VECTOR vlhs = solver.solveWithGuess(vrhs, x0);
+        // VECTOR vlhs = solver.solveWithGuess(vrhs, x0);
+        VECTOR vlhs = solver.solve(vrhs);
 
         // find acceleration response using receiver vectors
-        tmp.block(0, idx, nr, 1) = -winp * winp * VR.transpose() * vlhs;
+        // tmp.block(0, idx, nr, 1) = -winp * winp * VR.transpose() * vlhs;
+        tmp.block(0, idx, nr, 1) = -VR.transpose() * vlhs;
         // if (std::abs(idx - m_i1) < 5) {
         //     std::cout << std::setprecision(15) << idx << " "
         //               << VR.transpose() * vlhs << "\n";
@@ -302,6 +308,64 @@ FreqFull::Spectra_Raw_NoCoriolis(const MATRIX &a0, const MATRIX &a2,
 
         // find acceleration response using receiver vectors
         tmp.block(0, idx, nr, 1) = -winp * winp * VR.transpose() * vlhs;
+    };
+    return tmp;
+};
+
+FreqFull::MATRIX
+FreqFull::Spectra_Raw_NoCoriolis_LU(const MATRIX &a0, const MATRIX &a2,
+                                    const MATRIX &VR, const VECTOR &VS) const {
+    // check sizes with assertions
+    assert((a0.rows() == a0.cols()) && "a0 not square");
+    // assert((a1.rows() == a1.cols()) && "a1 not square");
+    assert((a2.rows() == a2.cols()) && "a2 not square");
+    assert(((a0.rows() == a2.rows())) && "Different matrix sizes");
+    assert((a0.rows() == VR.rows()) && "VR wrong size");
+    assert((a0.rows() == VS.rows()) && "VS wrong size");
+
+    // indices
+    auto nm = a0.rows();
+    std::size_t nr = VR.cols();
+    MATRIX tmp = MATRIX::Zero(nr, m_nt / 2 + 1);
+    // VECTOR tmp = VECTOR::Zero(m_nt / 2 + 1);
+    //////////////////////////////////////////////////////////////////////////////////
+    // some simple values
+    COMPLEX myi(0.0, 1.0);
+    // double oneovertwopi = 1.0 / (2.0 * 3.1415926535897932);
+    COMPLEX imep = static_cast<COMPLEX>(m_ep);
+    COMPLEX myvali = COMPLEX(0.0, -0.2);
+    // MATRIX A(nm, nm);
+
+    //////////////////////////////////////////////////////////////////////////////////
+    // #pragma omp parallel private(A) shared(a0, a1, a2)
+    //     {
+    // #pragma omp for schedule(dynamic, 10)
+    for (int idx = m_i1; idx < m_i2; ++idx) {
+        // HACKY: just to see values
+        // complex frequency
+        // COMPLEX winp = m_w[idx] - myi * imep;
+        COMPLEX winp = m_w[idx] + myvali;
+
+        // declare value of A
+        MATRIX A = a0 - winp * winp * a2;
+
+        //  rhs and guess
+        VECTOR vrhs = VS;
+
+        // using BiCGSTAB solver from Eigen
+        Eigen::FullPivLU<MATRIX> solver;
+
+        // set tolerance and compute
+        // solver.setTolerance(soltol);
+        solver.compute(A);
+        // VECTOR x0 = solver.preconditioner().solve(vrhs);
+
+        // solve and return
+        // VECTOR vlhs = solver.solveWithGuess(vrhs, x0);
+        VECTOR vlhs = solver.solve(vrhs);
+
+        // find acceleration response using receiver vectors
+        tmp.block(0, idx, nr, 1) = -VR.transpose() * vlhs;
     };
     return tmp;
 };
