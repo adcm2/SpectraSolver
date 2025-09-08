@@ -221,8 +221,8 @@ FreqFull::Spectra_Raw_Low_Memory(const MATRIX &a0, const MATRIX &a1,
         // MATRIX A = a0 + winp * a1 - winp * winp * a2;
 
         //  rhs and guess
-        // VECTOR vrhs = VS / (myi * winp);
-        VECTOR vrhs = VS;
+        VECTOR vrhs = VS / (myi * winp);
+        // VECTOR vrhs = VS;
 
         // using BiCGSTAB solver from Eigen
         solver.compute(A);
@@ -234,8 +234,8 @@ FreqFull::Spectra_Raw_Low_Memory(const MATRIX &a0, const MATRIX &a1,
         VECTOR vlhs = solver.solve(vrhs);
 
         // find acceleration response using receiver vectors
-        // tmp.block(0, idx, nr, 1) = -winp * winp * VR.transpose() * vlhs;
-        tmp.block(0, idx, nr, 1) = -VR.transpose() * vlhs;
+        tmp.block(0, idx, nr, 1) = -winp * winp * VR.transpose() * vlhs;
+        // tmp.block(0, idx, nr, 1) = -VR.transpose() * vlhs;
         // if (std::abs(idx - m_i1) < 5) {
         //     std::cout << std::setprecision(15) << idx << " "
         //               << VR.transpose() * vlhs << "\n";
@@ -350,7 +350,7 @@ FreqFull::Spectra_Raw_NoCoriolis_LU(const MATRIX &a0, const MATRIX &a2,
         MATRIX A = a0 - winp * winp * a2;
 
         //  rhs and guess
-        VECTOR vrhs = VS;
+        VECTOR vrhs = VS / (myi * winp);
 
         // using BiCGSTAB solver from Eigen
         Eigen::FullPivLU<MATRIX> solver;
@@ -365,7 +365,7 @@ FreqFull::Spectra_Raw_NoCoriolis_LU(const MATRIX &a0, const MATRIX &a2,
         VECTOR vlhs = solver.solve(vrhs);
 
         // find acceleration response using receiver vectors
-        tmp.block(0, idx, nr, 1) = -VR.transpose() * vlhs;
+        tmp.block(0, idx, nr, 1) = -winp * winp * VR.transpose() * vlhs;
     };
     return tmp;
 };

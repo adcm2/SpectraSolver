@@ -17,7 +17,6 @@
 
 namespace Eigen {
 
-
 template <typename Scalar_>
 class BlockMatFreePreconditioner {
     typedef Scalar_ Scalar;
@@ -40,12 +39,8 @@ class BlockMatFreePreconditioner {
     /////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////
 
-    EIGEN_CONSTEXPR Index rows() const EIGEN_NOEXCEPT {
-        return m_invdiag.size();
-    }
-    EIGEN_CONSTEXPR Index cols() const EIGEN_NOEXCEPT {
-        return m_invdiag.size();
-    }
+    constexpr Index rows() const noexcept { return m_invdiag.size(); }
+    constexpr Index cols() const noexcept { return m_invdiag.size(); }
 
     /////////////////////////////////////////////////////////////////////////
     /////////////////////////////////////////////////////////////////////////
