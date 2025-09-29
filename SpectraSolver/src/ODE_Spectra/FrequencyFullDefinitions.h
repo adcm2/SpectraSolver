@@ -206,9 +206,9 @@ FreqFull::Spectra_Raw_Low_Memory(const MATRIX &a0, const MATRIX &a1,
     // set tolerance and compute
     solver.setTolerance(soltol);
     for (int idx = m_i1; idx < m_i2; ++idx) {
-        COMPLEX myvali = COMPLEX(0.0, -0.2);
-        // COMPLEX winp = m_w[idx] - myi * imep;
-        COMPLEX winp = m_w[idx] + myvali;
+        // COMPLEX myvali = COMPLEX(0.0, -0.2);
+        COMPLEX winp = m_w[idx] - myi * imep;
+        // COMPLEX winp = m_w[idx] + myvali;
 
         // if (idx == m_i1) {
         //     std::cout << std::setprecision(15) << idx << " " << winp << "\n";
@@ -343,8 +343,8 @@ FreqFull::Spectra_Raw_NoCoriolis_LU(const MATRIX &a0, const MATRIX &a2,
     for (int idx = m_i1; idx < m_i2; ++idx) {
         // HACKY: just to see values
         // complex frequency
-        // COMPLEX winp = m_w[idx] - myi * imep;
-        COMPLEX winp = m_w[idx] + myvali;
+        COMPLEX winp = m_w[idx] - myi * imep;
+        // COMPLEX winp = m_w[idx] + myvali;
 
         // declare value of A
         MATRIX A = a0 - winp * winp * a2;
