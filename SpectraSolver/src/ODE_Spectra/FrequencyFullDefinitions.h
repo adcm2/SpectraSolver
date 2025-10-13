@@ -366,6 +366,11 @@ FreqFull::Spectra_Raw_NoCoriolis_LU(const MATRIX &a0, const MATRIX &a2,
 
         // find acceleration response using receiver vectors
         tmp.block(0, idx, nr, 1) = -winp * winp * VR.transpose() * vlhs;
+
+        // if ((idx > 9780) && (idx < 9785)) {
+        //     std::cout << std::setprecision(15) << idx << " "
+        //               << VR.transpose() * vlhs << "\n";
+        // }
     };
     return tmp;
 };
