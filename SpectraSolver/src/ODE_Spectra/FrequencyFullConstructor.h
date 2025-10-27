@@ -47,7 +47,7 @@ FreqFull::FreqFull(double f1, double f2, double dt, double tout, double df0,
     m_nt = std::ceil(1.0 / (m_df * m_dt));   // find nt
     int ne = static_cast<int>(log(static_cast<double>(m_nt)) / log(2.0) + 1);
     m_nt = pow(2, ne);   // finish increase in density
-    std::cout << "nt: " << m_nt << std::endl;
+    // std::cout << "nt: " << m_nt << std::endl;
     m_df = 1.0 / (m_nt * m_dt);   // new df
 
     // finding new values of f1 and f2 and corresponding integer numbers

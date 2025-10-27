@@ -23,7 +23,7 @@ using namespace std::complex_literals;
 
 Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>
 rawfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
-                                 Eigen::Dynamic> &rawspec,
+                                 Eigen::Dynamic>& rawspec,
              const int nt) {   // do Fourier transform
 
     // do corrections
@@ -66,8 +66,8 @@ rawfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
 
 Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic>
 rawtime2freq(
-    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> &rawspec,
-    const int &nt, double dt) {   // do Fourier transform
+    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>& rawspec,
+    const int& nt, double dt) {   // do Fourier transform
 
     using namespace FFTWpp;
     // for FFT
@@ -101,8 +101,8 @@ rawtime2freq(
 
 Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>
 filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
-                                  Eigen::Dynamic> &rawspec,
-              const SpectraSolver::FreqFull &calcdata) {
+                                  Eigen::Dynamic>& rawspec,
+              const SpectraSolver::FreqFull& calcdata) {
     // size of matrices
     int nrow = rawspec.rows();
     int ncol = rawspec.cols();
@@ -116,7 +116,7 @@ filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
     // filter raw spectrum
     for (int idx = 0; idx < calcdata.nt() / 2 + 1; ++idx) {
         tmpraw.block(0, idx, nrow, 1) *= filters::hannref(
-            calcdata.df() * idx, calcdata.f1(), calcdata.f2(), 0.1);
+            calcdata.df() * idx, calcdata.f1(), calcdata.f2(), 0.01);
     }
     // std::cout << "Hello2 \n";
     // do FFT
@@ -134,7 +134,7 @@ filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
 
 Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic>
 simptime2freq(
-    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> &rawspec,
+    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>& rawspec,
     const double dt, const double t2) {   // do Fourier transform
 
     // declarations
@@ -160,8 +160,8 @@ simptime2freq(
 
 Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic>
 fulltime2freq(
-    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> &rawspec,
-    const SpectraSolver::FreqFull &calcdata) {   // do Fourier transform
+    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>& rawspec,
+    const SpectraSolver::FreqFull& calcdata) {   // do Fourier transform
 
     // declarations
     int nrow = rawspec.rows();
