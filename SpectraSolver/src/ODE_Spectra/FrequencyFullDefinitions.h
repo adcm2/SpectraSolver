@@ -31,6 +31,14 @@ FreqFull::f2() const {
     return m_f2;
 }
 double
+FreqFull::f12() const {
+    return m_f12;
+}
+double
+FreqFull::f21() const {
+    return m_f21;
+}
+double
 FreqFull::tout() const {
     return m_tout;
 }
@@ -113,8 +121,8 @@ FreqFull::t(int idx) const {
 
 // only including one source at the moment
 FreqFull::MATRIX
-FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
-                      const MATRIX &VR, const VECTOR &VS,
+FreqFull::Spectra_Raw(const MATRIX& a0, const MATRIX& a1, const MATRIX& a2,
+                      const MATRIX& VR, const VECTOR& VS,
                       const double soltol) const {
     // check sizes with assertions
     assert((a0.rows() == a0.cols()) && "a0 not square");
@@ -170,9 +178,9 @@ FreqFull::Spectra_Raw(const MATRIX &a0, const MATRIX &a1, const MATRIX &a2,
 };
 
 FreqFull::MATRIX
-FreqFull::Spectra_Raw_Low_Memory(const MATRIX &a0, const MATRIX &a1,
-                                 const MATRIX &a2, const MATRIX &VR,
-                                 const VECTOR &VS, const double soltol) const {
+FreqFull::Spectra_Raw_Low_Memory(const MATRIX& a0, const MATRIX& a1,
+                                 const MATRIX& a2, const MATRIX& VR,
+                                 const VECTOR& VS, const double soltol) const {
     // check sizes with assertions
     assert((a0.rows() == a0.cols()) && "a0 not square");
     assert((a1.rows() == a1.cols()) && "a1 not square");
@@ -249,16 +257,16 @@ FreqFull::Spectra_Raw_Low_Memory(const MATRIX &a0, const MATRIX &a1,
 };
 
 FreqFull::MATRIX
-FreqFull::Spectra_Raw_No_Coriolis_Low_Memory(const MATRIX &a0, const MATRIX &a2,
-                                             const MATRIX &VR, const VECTOR &VS,
+FreqFull::Spectra_Raw_No_Coriolis_Low_Memory(const MATRIX& a0, const MATRIX& a2,
+                                             const MATRIX& VR, const VECTOR& VS,
                                              const double soltol) const {
     MATRIX a1 = MATRIX::Zero(a0.rows(), a0.cols());
     return Spectra_Raw_Low_Memory(a0, a1, a2, VR, VS, soltol);
 };
 
 FreqFull::MATRIX
-FreqFull::Spectra_Raw_NoCoriolis(const MATRIX &a0, const MATRIX &a2,
-                                 const MATRIX &VR, const VECTOR &VS,
+FreqFull::Spectra_Raw_NoCoriolis(const MATRIX& a0, const MATRIX& a2,
+                                 const MATRIX& VR, const VECTOR& VS,
                                  const double soltol) const {
     // check sizes with assertions
     assert((a0.rows() == a0.cols()) && "a0 not square");
@@ -313,8 +321,8 @@ FreqFull::Spectra_Raw_NoCoriolis(const MATRIX &a0, const MATRIX &a2,
 };
 
 FreqFull::MATRIX
-FreqFull::Spectra_Raw_NoCoriolis_LU(const MATRIX &a0, const MATRIX &a2,
-                                    const MATRIX &VR, const VECTOR &VS) const {
+FreqFull::Spectra_Raw_NoCoriolis_LU(const MATRIX& a0, const MATRIX& a2,
+                                    const MATRIX& VR, const VECTOR& VS) const {
     // check sizes with assertions
     assert((a0.rows() == a0.cols()) && "a0 not square");
     // assert((a1.rows() == a1.cols()) && "a1 not square");

@@ -5,10 +5,20 @@ namespace SpectraSolver {
 // constructor
 // f1, f2 in mHz, dt in s, tout in hours, df0 in mHz, wtb in mHz, t1 and t2 in
 // hours qex is an integer to increase frequency resolution
+
 FreqFull::FreqFull(double f1, double f2, double dt, double tout, double df0,
                    double wtb, double t1, double t2, int qex, double TimeNorm)
+    : FreqFull(f1, f1, f2, f2, dt, tout, df0, wtb, t1, t2, qex, TimeNorm) {};
+
+//////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////
+FreqFull::FreqFull(double f1, double f12, double f21, double f2, double dt,
+                   double tout, double df0, double wtb, double t1, double t2,
+                   int qex, double TimeNorm)
     : m_f1{f1 / 1000.0 * TimeNorm},
       m_f2{f2 / 1000.0 * TimeNorm},
+      m_f12{f12 / 1000.0 * TimeNorm},
+      m_f21{f21 / 1000.0 * TimeNorm},
       m_dt{dt / TimeNorm},
       m_df0{df0 / 1000.0 * TimeNorm},
       m_tout{tout * 3600.0 / TimeNorm},

@@ -20,22 +20,23 @@ class FreqFull {
     ~FreqFull() {};
     FreqFull(double, double, double, double, double, double, double, double,
              int, double = 1.0);
+    FreqFull(double, double, double, double, double, double, double, double,
+             double, double, int, double = 1.0);
 
     // spectra
-    MATRIX Spectra_Raw(const MATRIX &, const MATRIX &, const MATRIX &,
-                       const MATRIX &, const VECTOR &, const double) const;
+    MATRIX Spectra_Raw(const MATRIX&, const MATRIX&, const MATRIX&,
+                       const MATRIX&, const VECTOR&, const double) const;
     // template <typename MatrixType>
-    MATRIX Spectra_Raw_Low_Memory(const MATRIX &, const MATRIX &,
-                                  const MATRIX &, const MATRIX &,
-                                  const VECTOR &, const double) const;
-    MATRIX Spectra_Raw_NoCoriolis(const MATRIX &, const MATRIX &,
-                                  const MATRIX &, const VECTOR &,
+    MATRIX Spectra_Raw_Low_Memory(const MATRIX&, const MATRIX&, const MATRIX&,
+                                  const MATRIX&, const VECTOR&,
                                   const double) const;
-    MATRIX Spectra_Raw_No_Coriolis_Low_Memory(const MATRIX &, const MATRIX &,
-                                              const MATRIX &, const VECTOR &,
+    MATRIX Spectra_Raw_NoCoriolis(const MATRIX&, const MATRIX&, const MATRIX&,
+                                  const VECTOR&, const double) const;
+    MATRIX Spectra_Raw_No_Coriolis_Low_Memory(const MATRIX&, const MATRIX&,
+                                              const MATRIX&, const VECTOR&,
                                               const double) const;
-    MATRIX Spectra_Raw_NoCoriolis_LU(const MATRIX &, const MATRIX &,
-                                     const MATRIX &, const VECTOR &) const;
+    MATRIX Spectra_Raw_NoCoriolis_LU(const MATRIX&, const MATRIX&,
+                                     const MATRIX&, const VECTOR&) const;
 
     // double functions
     double f(int) const;
@@ -43,6 +44,8 @@ class FreqFull {
     double f2(int) const;
     double f1() const;
     double f2() const;
+    double f12() const;
+    double f21() const;
     double tout() const;
     double df() const;
     double df0() const;
@@ -69,7 +72,7 @@ class FreqFull {
 
    private:
     double m_f1, m_f2, m_tout, m_df0, m_wtb, m_t1, m_t2, m_df, m_ep, m_df2,
-        m_dt, m_timenorm, m_frequencynorm;
+        m_dt, m_timenorm, m_frequencynorm, m_f12, m_f21;
     int m_nt, m_nt0, m_i1, m_i2, m_i12, m_i22;
 
     std::vector<double> m_w;

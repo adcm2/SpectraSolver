@@ -115,8 +115,11 @@ filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
     // std::cout << "Hello1 \n";
     // filter raw spectrum
     for (int idx = 0; idx < calcdata.nt() / 2 + 1; ++idx) {
-        tmpraw.block(0, idx, nrow, 1) *= filters::hannref(
-            calcdata.df() * idx, calcdata.f1(), calcdata.f2(), 0.01);
+        // tmpraw.block(0, idx, nrow, 1) *= filters::hannref(
+        //     calcdata.df() * idx, calcdata.f1(), calcdata.f2(), 0.01);
+        tmpraw.block(0, idx, nrow, 1) *=
+            filters::hannref(calcdata.df() * idx, calcdata.f1(), calcdata.f12(),
+                             calcdata.f21(), calcdata.f2());
     }
     // std::cout << "Hello2 \n";
     // do FFT
@@ -124,10 +127,10 @@ filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
     // std::cout << "Hello3 \n";
     // undo effect of frequency shift
     for (int idx = 0; idx < calcdata.nt(); ++idx) {
-        if (calcdata.dt() * idx < calcdata.tout()) {
-            tmp.block(0, idx, nrow, 1) *=
-                exp(calcdata.ep() * calcdata.dt() * idx) * calcdata.df();
-        }
+        // if (calcdata.dt() * idx < calcdata.tout()) {
+        tmp.block(0, idx, nrow, 1) *=
+            exp(calcdata.ep() * calcdata.dt() * idx) * calcdata.df();
+        // }
     }
     return tmp;
 };
