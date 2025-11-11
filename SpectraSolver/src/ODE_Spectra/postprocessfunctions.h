@@ -102,7 +102,8 @@ rawtime2freq(
 Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>
 filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
                                   Eigen::Dynamic>& rawspec,
-              const SpectraSolver::FreqFull& calcdata) {
+              const SpectraSolver::FreqFull& calcdata,
+              bool undo_exponent = true) {
     // size of matrices
     int nrow = rawspec.rows();
     int ncol = rawspec.cols();
@@ -126,12 +127,15 @@ filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
     tmp = rawfreq2time(tmpraw, calcdata.nt());
     // std::cout << "Hello3 \n";
     // undo effect of frequency shift
-    for (int idx = 0; idx < calcdata.nt(); ++idx) {
-        // if (calcdata.dt() * idx < calcdata.tout()) {
-        tmp.block(0, idx, nrow, 1) *=
-            exp(calcdata.ep() * calcdata.dt() * idx) * calcdata.df();
-        // }
+    if (undo_exponent) {
+        for (int idx = 0; idx < calcdata.nt(); ++idx) {
+            // if (calcdata.dt() * idx < calcdata.tout()) {
+            tmp.block(0, idx, nrow, 1) *=
+                exp(calcdata.ep() * calcdata.dt() * idx);
+            // }
+        }
     }
+    tmp *= calcdata.df();
     return tmp;
 };
 
@@ -151,7 +155,7 @@ simptime2freq(
     tmpraw = rawspec;
     for (int idx = 0; idx < nt; ++idx) {
         tmpraw.block(0, idx, nrow, 1) *=
-            filters::hannref(idx * dt, 0.0, t2, 0.5);
+            filters::hannref(idx * dt, 0.0, t2, 0.03);
     }
 
     // do conversion
@@ -168,10 +172,9 @@ fulltime2freq(
 
     // declarations
     int nrow = rawspec.rows();
-    Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic> tmp;
-    Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> tmpraw =
-        Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>::Zero(
-            nrow, calcdata.nt0());
+    using namespace Eigen;
+    MatrixXcd tmp;
+    MatrixXd tmpraw = MatrixXd::Zero(nrow, calcdata.nt0());
 
     // filter
     tmpraw.block(0, 0, nrow, calcdata.nt()) = rawspec;
