@@ -189,6 +189,54 @@ fulltime2freq(
     return tmp;
 };
 
+Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic>
+simptime2freq(
+    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>& rawspec,
+    const double dt, const double t2, double hval) {   // do Fourier transform
+
+    // declarations
+    int nrow = rawspec.rows();
+    int nt = rawspec.cols();
+    Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic> tmp(
+        rawspec.rows(), nt / 2 + 1);
+    Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> tmpraw;
+
+    // filter
+    tmpraw = rawspec;
+    for (int idx = 0; idx < nt; ++idx) {
+        tmpraw.block(0, idx, nrow, 1) *=
+            filters::hannref(idx * dt, 0.0, t2, hval);
+    }
+
+    // do conversion
+    tmp = rawtime2freq(tmpraw, nt, dt);
+
+    // return
+    return tmp;
+};
+
+Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic>
+fulltime2freq(
+    const Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>& rawspec,
+    const SpectraSolver::FreqFull& calcdata,
+    double hval) {   // do Fourier transform
+
+    // declarations
+    int nrow = rawspec.rows();
+    using namespace Eigen;
+    MatrixXcd tmp;
+    MatrixXd tmpraw = MatrixXd::Zero(nrow, calcdata.nt0());
+
+    // filter
+    tmpraw.block(0, 0, nrow, calcdata.nt()) = rawspec;
+
+    // do conversion
+    tmp = simptime2freq(tmpraw, calcdata.dt(), calcdata.t2(), hval);
+
+    // return
+    return tmp;
+};
+
 }   // namespace processfunctions
 
 #endif
