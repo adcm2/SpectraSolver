@@ -131,11 +131,14 @@ filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
         for (int idx = 0; idx < calcdata.nt(); ++idx) {
             // if (calcdata.dt() * idx < calcdata.tout()) {
             tmp.block(0, idx, nrow, 1) *=
-                exp(calcdata.ep() * calcdata.dt() * idx);
+                exp(calcdata.ep() * calcdata.dt() * idx) * calcdata.df();
             // }
         }
+    } else {
+        // do nothing
+        tmp *= calcdata.df();
     }
-    tmp *= calcdata.df();
+
     return tmp;
 };
 
@@ -155,7 +158,7 @@ simptime2freq(
     tmpraw = rawspec;
     for (int idx = 0; idx < nt; ++idx) {
         tmpraw.block(0, idx, nrow, 1) *=
-            filters::hannref(idx * dt, 0.0, t2, 0.03);
+            filters::hannref(idx * dt, 0.0, t2, 0.5);
     }
 
     // do conversion
