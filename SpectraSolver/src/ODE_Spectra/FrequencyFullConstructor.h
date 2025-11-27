@@ -62,10 +62,11 @@ FreqFull::FreqFull(double f1, double f12, double f21, double f2, double dt,
 
     // finding new values of f1 and f2 and corresponding integer numbers
 
-    m_i1 = std::max(static_cast<int>(std::floor(m_f1 / m_df)), 0);
+    m_i1 = std::max(static_cast<int>(std::floor(m_f1 / m_df)), 2);
     m_i2 = std::min(static_cast<int>(std::floor(m_f2 / m_df)) + 2, m_nt);
-    m_f1 = (m_i1 - 1) * m_df;
-    m_f2 = (m_i2 - 1) * m_df;
+    m_i1 -= 1;
+    m_f1 = m_i1 * m_df;
+    m_f2 = m_i2 * m_df;
 
     // fill out w, remembering w = 2pi f, and only needing to go up to nt/2+1 as
     // half length of time series

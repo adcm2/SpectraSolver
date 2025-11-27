@@ -64,16 +64,16 @@ hannref(const xtype& f, const xtype& f11, const xtype& f12, const xtype& f21,
             return static_cast<xtype>(0.0);
 
         } else if (f >= f11 && f < f12) {
-            xtype tmp =
-                static_cast<xtype>(3.1415926535) * (f - f11) / (f12 - f11);
+            xtype tmp = static_cast<xtype>(3.1415926535897932) * (f - f11) /
+                        (f12 - f11);
             return static_cast<xtype>(0.5 * (1.0 - std::cos(tmp)));
 
         } else if (f >= f12 && f < f21) {
             return static_cast<xtype>(1.0);
 
         } else if (f >= f21 && f < f22) {
-            xtype tmp =
-                static_cast<xtype>(3.1415926535) * (f22 - f) / (f22 - f21);
+            xtype tmp = static_cast<xtype>(3.1415926535897932) * (f22 - f) /
+                        (f22 - f21);
             return static_cast<xtype>(0.5 * (1.0 - std::cos(tmp)));
 
         } else {
