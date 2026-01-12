@@ -34,13 +34,24 @@ double
 FreqFull::f12() const {
     return m_f12;
 }
+
+double
+FreqFull::f11() const {
+    return m_f11;
+}
+
 double
 FreqFull::f21() const {
     return m_f21;
 }
+
 double
 FreqFull::tout() const {
     return m_tout;
+}
+double
+FreqFull::f22() const {
+    return m_f22;
 }
 double
 FreqFull::df() const {

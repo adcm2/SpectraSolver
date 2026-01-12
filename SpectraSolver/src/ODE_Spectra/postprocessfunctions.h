@@ -100,6 +100,31 @@ rawtime2freq(
 };
 
 Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>
+freq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
+                              Eigen::Dynamic>& rawspec,
+          const SpectraSolver::FreqFull& calcdata, bool undo_exponent = true) {
+    // declaring temporaries
+    Eigen::MatrixXcd tmpraw = rawspec;
+
+    //////////////////////////////////
+    // do FFT
+    auto tmp = rawfreq2time(tmpraw, calcdata.nt());
+
+    // undo effect of frequency shift
+    if (undo_exponent) {
+        for (int idx = 0; idx < calcdata.nt(); ++idx) {
+            tmp.col(idx) *=
+                exp(calcdata.ep() * calcdata.dt() * idx) * calcdata.df();
+        }
+    } else {
+        // do nothing
+        tmp *= calcdata.df();
+    }
+
+    return tmp;
+};
+
+Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>
 filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
                                   Eigen::Dynamic>& rawspec,
               const SpectraSolver::FreqFull& calcdata,
@@ -113,15 +138,78 @@ filtfreq2time(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
                                                               calcdata.nt());
     Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic> tmpraw;
     tmpraw = rawspec;
+
+    // filter raw spectrum
+    for (int idx = 0; idx < calcdata.nt() / 2 + 1; ++idx) {
+        tmpraw.block(0, idx, nrow, 1) *=
+            filters::hannref(calcdata.df() * idx, calcdata.f11(),
+                             calcdata.f12(), calcdata.f21(), calcdata.f22());
+    }
+
+    //////////////////////////////////
+    // do FFT
+    tmp = rawfreq2time(tmpraw, calcdata.nt());
+
+    // undo effect of frequency shift
+    if (undo_exponent) {
+        for (int idx = 0; idx < calcdata.nt(); ++idx) {
+            tmp.block(0, idx, nrow, 1) *=
+                exp(calcdata.ep() * calcdata.dt() * idx) * calcdata.df();
+        }
+    } else {
+        // do nothing
+        tmp *= calcdata.df();
+    }
+
+    return tmp;
+};
+
+Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic>
+filtfreq2time_check(const Eigen::Matrix<std::complex<double>, Eigen::Dynamic,
+                                        Eigen::Dynamic>& rawspec,
+                    const SpectraSolver::FreqFull& calcdata,
+                    bool undo_exponent = true) {
+    // size of matrices
+    int nrow = rawspec.rows();
+    int ncol = rawspec.cols();
+
+    // declaring temporaries
+    Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic> tmp(nrow,
+                                                              calcdata.nt());
+    Eigen::Matrix<std::complex<double>, Eigen::Dynamic, Eigen::Dynamic> tmpraw;
+    tmpraw = rawspec;
     // std::cout << "Hello1 \n";
     // filter raw spectrum
+
+    // filter parameter output
+    // std::cout << "Frequency filter parameters: " << calcdata.f1() << " "
+    //           << calcdata.f12() << " " << calcdata.f21() << " " <<
+    //           calcdata.f2()
+    //           << "\n";
     for (int idx = 0; idx < calcdata.nt() / 2 + 1; ++idx) {
         // tmpraw.block(0, idx, nrow, 1) *= filters::hannref(
         //     calcdata.df() * idx, calcdata.f1(), calcdata.f2(), 0.01);
         tmpraw.block(0, idx, nrow, 1) *=
-            filters::hannref(calcdata.df() * idx, calcdata.f1(), calcdata.f12(),
-                             calcdata.f21(), calcdata.f2());
+            filters::hannref(calcdata.df() * idx, calcdata.f11(),
+                             calcdata.f12(), calcdata.f21(), calcdata.f22());
     }
+
+    //////////////////////////////////
+    // output filtered spectrum for checking
+    std::string pathtofile = "./work/spheroidal/check_filt.out";
+    std::ofstream file(pathtofile);
+    file.setf(std::ios::fixed);
+    file << std::setprecision(22);
+
+    for (std::size_t idx = 0; idx < tmpraw.cols(); ++idx) {
+        file << idx * calcdata.df() * 1000.0 / 930.067615796154 << ";"
+             << rawspec(0, idx).real() << ";" << rawspec(0, idx).imag() << ";"
+             << tmpraw(0, idx).real() << ';' << tmpraw(0, idx).imag() << '\n';
+    }
+    file.close();
+
+    //////////////////////////////////
+
     // std::cout << "Hello2 \n";
     // do FFT
     tmp = rawfreq2time(tmpraw, calcdata.nt());
