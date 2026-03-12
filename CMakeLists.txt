@@ -27,18 +27,20 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/FindLAPACKE.cmake")
 # Locate  FFTW3
 find_package(FFTW)
 
-# add in Eigen3
-find_package (Eigen3 3.3 REQUIRED NO_MODULE)
+# Try to find Eigen3 on the system first (without making it REQUIRED)
+find_package(Eigen3 3.3 QUIET)
 
-
-# add in Eigen3
-include(FetchContent)
-FetchContent_Declare(
-  Eigen3
-  GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-  GIT_TAG master
-)
-FetchContent_MakeAvailable(Eigen3)
+# If it wasn't found, download it automatically
+if(NOT Eigen3_FOUND)
+    message(STATUS "Eigen3 not found locally, downloading via FetchContent...")
+    include(FetchContent)
+    FetchContent_Declare(
+      Eigen3
+      GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+      GIT_TAG 3.4.0   # Note: I changed 'master' to a stable release tag (3.4.0) to prevent future breakage
+    )
+    FetchContent_MakeAvailable(Eigen3)
+endif()
 
 # find_package (FFTWpp)
 include(FetchContent)
